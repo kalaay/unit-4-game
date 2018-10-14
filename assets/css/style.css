@@ -1,10 +1,10 @@
 .header {
-    background-image: url("assets/images/background.gif");
+    background-image: url("assets/images/backgroud.gif");
     background-repeat: no-repeat;
 }
+.randomNumber{
+    background-color: rgb(99, 235, 99);
 
-body{
-    background-color: aqua;
 }
 
 
