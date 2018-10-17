@@ -98,25 +98,15 @@ $(document).ready(function() {
 function winner(){
     alert("WINNER-GAGNON!!");
     win++;
-    $("#winsDislpay").text(wins);
+    $("#winsDislpay").append(wins);
 }
 
 function loser(){
     alert("YOU LOSE!");
     loses++;
-    $("#losesDislpay").text(loses);
+    $("#losesDislpay").append(loses);
 }
 
-function compare(){
 
-    if (totalScore == randomNum) {
-        winner();
-        }
-        
-        else if (totalScore > randomNum)  {
-            loser();
-            
-        }
-}
 
 
