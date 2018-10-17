@@ -2,9 +2,25 @@
     background-image: url("assets/images/backgroud.gif");
     background-repeat: no-repeat;
 }
-.randomNumber{
-    background-color: rgb(99, 235, 99);
+#randomNumDislpay{
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: rgb(241, 55, 55);
+    background: #54ca0f;
+    background-color: #54ca0f
 
+    
 }
-
+  
+.col-4 {
+    background: rgb(83, 170, 221);
+    float: left;
+    clear: both;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    color: rgb(8, 8, 8);
+    width: 150px;
+}
 
