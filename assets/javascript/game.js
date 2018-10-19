@@ -1,112 +1,139 @@
+
+   
+ var randomNum = Math.floor(Math.random() * 101) + 19;
+ var blueChrystal = Math.floor((Math.random() * 11) + 1);
+ var greenChrystal = Math.floor((Math.random() * 11) + 1);
+ var redChrystal = Math.floor((Math.random() * 11) + 1);
+ var purpleChrystal = Math.floor((Math.random() * 11) + 1);
+ var wins = 0;
+ var loses = 0;
+ var totalScore = 0;  
+
+
+    
+    function winner(){
+             alert("WINNER-GAGNON!!");
+             wins++;
+             reset();
+             $("#winsDislpay").text("Wins:    " + wins);
+            
+    }
+        
+    function loser(){
+             alert("YOU LOSE!");
+             loses++;
+             reset();
+             $("#losesDislpay").text("Loses: " + loses);
+    }
+
+    function reset(){
+        var randomNum = Math.floor(Math.random() * 101) + 19;
+        var blueChrystal = Math.floor((Math.random() * 11) + 1);
+        var greenChrystal = Math.floor((Math.random() * 11) + 1);
+        var redChrystal = Math.floor((Math.random() * 11) + 1);
+        var purpleChrystal = Math.floor((Math.random() * 11) + 1);
+        var wins = 0;
+        var loses = 0;
+        var totalScore = 0;  
+    }
+   
 $(document).ready(function() {
 
-   var randomNum = 0;
-   var blueChrystal = 0;
-   var greenChrystal =0;
-   var redChrystal =0;
-   var purpleChrystal =0;
-   var wins = 0;
-   var loses = 0;
-   var totalScore = 0;
+    $("#randomNumDislpay").text(randomNum);
+    $("#totalScoreDislpay").text(totalScore);
 
-   //generate random number at the start of the game 
-   randomNum = document.getElementById("randomNumDislpay").innerHTML =Math.floor(Math.random() * 101) + 19;
+    console.log("blue value is  " + blueChrystal);
 
-    
-   blueChrystal = Math.floor((Math.random() * 12) + 1);
-   console.log(blueChrystal);
+    $("#bluestone").on ("click", function(){
 
-   $("#bluestone").on ("click", function(){
     totalScore = totalScore + blueChrystal;
-    $("#totalScoreDislpay").text(totalScore);
-    console.log(totalScore)
 
+    $("#totalScoreDislpay").text(totalScore);
+
+    console.log("total score  " + totalScore)
+ 
     if (totalScore == randomNum) {
-    winner();
+        winner();
     }
-    
+     
     else if (totalScore > randomNum)  {
-        loser();
-        
+        loser();   
+    }
+ 
+ })
+    
+
+    console.log("green value  " + greenChrystal);
+
+    $("#greenstone").on ("click", function(){
+
+    totalScore = totalScore + greenChrystal;
+
+    $("#totalScoreDislpay").text(totalScore);
+
+    console.log("total score  " + totalScore)
+
+    if (totalScore == randomNum) {
+        winner();
+    }
+         
+    else if (totalScore > randomNum)  {
+        oser(); 
+    }
+ })
+
+ 
+    console.log("red value  " + redChrystal);
+ 
+    $("#red").on ("click", function(){
+
+    totalScore = totalScore + redChrystal;
+
+    $("#totalScoreDislpay").text(totalScore);
+
+    console.log("total score" + totalScore)
+
+    if (totalScore == randomNum) {
+        winner();
+    }
+         
+    else if (totalScore > randomNum)  {
+        loser();  
+    
+    }
+ })
+ 
+
+    console.log("purple value " + purpleChrystal);
+ 
+    $("#purple").on ("click", function(){
+
+    totalScore = totalScore + purpleChrystal;
+
+    $("#totalScoreDislpay").text(totalScore);
+
+    console.log("total score" + totalScore)
+
+    if (totalScore == randomNum) {
+        winner();
     }
 
-})
-   
-   greenChrystal = Math.floor((Math.random() * 12) + 1);
-   console.log(greenChrystal);
+    else if (totalScore > randomNum)  {
+        loser(); 
+    
+    }
+ })
 
-   $("#greenstone").on ("click", function(){
-    totalScore = totalScore + greenChrystal;
+}); 
+
+
+ //Displays the number of wins and loses on the screen
+ 
+    $("#winsDislpay").text ("Wins:  " + wins);
+    console.log("Wins:  " + wins);
+ 
+    $("#losesDislpay").text("Loses: " + loses);
+    console.log("Loses:  " + loses);
+ 
     $("#totalScoreDislpay").text(totalScore);
-    console.log(totalScore)
-    if (totalScore == randomNum) {
-        winner();
-        }
-        
-        else if (totalScore > randomNum)  {
-            loser();
-            
-        }
-})
-
-   redChrystal = Math.floor((Math.random() * 12) + 1);
-   console.log(redChrystal);
-
-   $("#red").on ("click", function(){
-    totalScore = totalScore + redChrystal;
-    $("#totalScoreDislpay").text(totalScore);
-    console.log(totalScore)
-    if (totalScore == randomNum) {
-        winner();
-        }
-        
-        else if (totalScore > randomNum)  {
-            loser();
-            
-        }
-})
-
-   purpleChrystal = Math.floor((Math.random() * 12) + 1);
-   console.log(purpleChrystal);
-
-   $("#purple").on ("click", function(){
-    totalScore = totalScore + purpleChrystal;
-    $("#totalScoreDislpay").text(totalScore);
-    console.log(totalScore)
-    if (totalScore == randomNum) {
-        winner();
-        }
-        
-        else if (totalScore > randomNum)  {
-            loser();
-            
-        }
-})
-
-// Displays the number of wins and loses on the screen
-
-   $("#winsDislpay").append (wins);
-   console.log(wins);
-
-   $("#losesDislpay").append(loses);
-   console.log(loses);
-
-  // $("#totalScoreDislpay").append(totalScore);
-   console.log(totalScore);
-});
-
-function winner(){
-    alert("WINNER-GAGNON!!");
-    win++;
-    $("#winsDislpay").append(wins);
-}
-
-function loser(){
-    alert("YOU LOSE!");
-    loses++;
-    $("#losesDislpay").append(loses);
-}
-
-
-
-
+    console.log("Total Score " + totalScore);
