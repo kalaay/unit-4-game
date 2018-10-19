@@ -4,25 +4,39 @@
 }
 #randomNumDislpay{
     float: left;
+    clear: both;
+
     margin-left: 5px;
     margin-right: 10px;
     margin-bottom: 20px;
     background-color: #54ca0f 
 }
-  
-.col-4 {
-    background: rgb(83, 170, 221);
+
+#winsDislpay{
     float: left;
     clear: both;
+    margin-right: 10px;
+
+    margin-left: 15px;
+
+}
+
+#losessDislpay{
+     
+}
+  
+/*
+.col-4 {
+    background: rgb(83, 170, 221);
     margin-left: 35px;
     margin-bottom: 20px;
     color: rgb(8, 8, 8);
     width: 150px;
 }
-
+*/
  
 .footer{
-    background: rgb(83, 170, 221);
+background-color: aquamarine;
     margin-bottom: 20px;
     margin-top: 20px;
     color: rgb(8, 8, 8);
